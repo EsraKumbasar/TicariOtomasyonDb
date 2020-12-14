@@ -26,13 +26,13 @@ namespace TicariOtomasyon.Models.Siniflar
 
         public decimal SatisFiyat { get; set; }
 
-        public bool Durum { get; set; } //ürünün satış miktarının kritik olup olmadığını belirler.
+        public int Durum { get; set; } //ürünün satış miktarının kritik olup olmadığını belirler.
 
         [Column(TypeName = "Varchar2")]
         [StringLength(250)]
         public string UrunGorsel { get; set; }
-
-        public Kategori Kategori { get; set; }
+        public int KategoriId { get; set; }
+        public virtual Kategori Kategori { get; set; }
 
         public ICollection<SatisHareket> SatisHarekets { get; set; }
     }
