@@ -5,7 +5,7 @@
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<OnlineTicariOtomasyon.Models.Siniflar.Context>
+    internal sealed class Configuration : DbMigrationsConfiguration<TicariOtomasyon.Models.Siniflar.Context>
     {
         public Configuration()
         {
@@ -13,7 +13,7 @@
             AutomaticMigrationDataLossAllowed = true;
         }
 
-        protected override void Seed(OnlineTicariOtomasyon.Models.Siniflar.Context context)
+        protected override void Seed(TicariOtomasyon.Models.Siniflar.Context context)
         {
             //  This method will be called after migrating to the latest version.
 

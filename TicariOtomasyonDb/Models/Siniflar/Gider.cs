@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace OnlineTicariOtomasyon.Models.Siniflar
+namespace TicariOtomasyon.Models.Siniflar
 {
     public class Gider
     {

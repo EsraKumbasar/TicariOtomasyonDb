@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.Entity;
 
 
-namespace OnlineTicariOtomasyon.Models.Siniflar
+namespace TicariOtomasyon.Models.Siniflar
 {
     public class Context : DbContext
     {
