@@ -42,5 +42,10 @@ namespace TicariOtomasyonDb.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult UrunGetir(int id)
+        {
+            var urunDeger = c.Uruns.Find(id);
+            return View("UrunGetir", urunDeger);
+        }
     }
 }
