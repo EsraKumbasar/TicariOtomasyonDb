@@ -44,8 +44,31 @@ namespace TicariOtomasyonDb.Controllers
         }
         public ActionResult UrunGetir(int id)
         {
+            List<SelectListItem> deger1 = (from x in c.Kategoris.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text = x.KategoriAd,
+                                               Value = x.KategoriID.ToString()
+                                           }).ToList();
+            ViewBag.dgr1 = deger1;
+
             var urunDeger = c.Uruns.Find(id);
             return View("UrunGetir", urunDeger);
+        }
+        public ActionResult UrunGuncelle(Urun p)
+        {
+            var urn = c.Uruns.Find(p.Urunid);
+            urn.AlisFiyat = p.AlisFiyat;
+            urn.Durum = p.Durum;
+            urn.KategoriId = p.KategoriId;
+            urn.Marka = p.Marka;
+            urn.SatisFiyat = p.SatisFiyat;
+            urn.Stok = p.Stok;
+            urn.UrunAd = p.UrunAd;
+            urn.UrunGorsel = p.UrunGorsel;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+
         }
     }
 }

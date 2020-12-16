@@ -16,6 +16,7 @@ namespace TicariOtomasyon.Models.Siniflar
         [StringLength(30)]
         public string DepartmanAd { get; set; }
 
+        public int Durum { get; set; }
         public ICollection<Personel> Personels { get; set; }
     }
 }

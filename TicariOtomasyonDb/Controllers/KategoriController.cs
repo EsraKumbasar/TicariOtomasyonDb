@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TicariOtomasyon.Models.Siniflar;
-namespace MvcOnlineTicariOtomasyon.Controllers
+namespace TicariOtomasyon.Controllers
 {
     public class KategoriController : Controller
     {
