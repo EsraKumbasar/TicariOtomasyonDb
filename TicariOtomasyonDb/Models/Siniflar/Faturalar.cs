@@ -26,11 +26,15 @@ namespace TicariOtomasyon.Models.Siniflar
         [StringLength(60)]
         public string VergiDairesi { get; set; }
 
-        public DateTime Saat { get; set; }
+        [Column(TypeName = "Char")]
+        [StringLength(5)]
+        public string Saat { get; set; }
 
         [Column(TypeName = "Varchar2")]
         [StringLength(30)]
         public string TeslimEden { get; set; }
+
+        public decimal Toplam { get; set; }
 
         [Column(TypeName = "Varchar2")]
         [StringLength(30)]
