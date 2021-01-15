@@ -56,19 +56,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="register-left">
                 <div class="register">
             
-                    <h1>Asp.Net ile</h1>
-                    <h2>Web Projesi Geliştirme</h2>
-                    <p>
-                        Admin, personel kişisel sayfası ve cari kişisel sayfası olmak üzere 3 tane 
-                        temel yapımız bulunmaktadır. Giriş yapmak istediğiniz yetki durumuna göre sağ taraftan 
-                        ilgili menüyü seçiniz.
-                    </p>
-                    <div class="content3">
-                        <ul>
-                            <li><a class="" href="#"> Firmalar</a></li>
-                            <li><a class="read" href="#"> Ürünlerimiz</a></li>
-                        </ul>
-                    </div>
+                    
+                
                 </div>
             </div>
             <div class="register-right">
@@ -127,12 +116,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h3>Personel Formu Girişi</h3>
                     <div class="clear"></div>
                     <div class="login-agileits-top">
-                        <form action="#" method="post">
+                        @using (Html.BeginForm("AdminLogin", "Login", FormMethod.Post))
+                        {
                             <input type="text" class="name" name="KullaniciAd" Placeholder="Kullanıcı Adı" required="" />
                             <input type="password" class="password" name="Sifre" Placeholder="Şifre" required="" />
                             <input type="submit" value="Giriş Yap">
-                        </form>
-                    </div>
+                        }
+                        </div>
                 </div>
             </div>
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using TicariOtomasyon.Models.Siniflar;
 namespace TicariOtomasyon.Controllers
 {
@@ -47,6 +48,12 @@ namespace TicariOtomasyon.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [Authorize]
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
